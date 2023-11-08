@@ -1,0 +1,19 @@
+{
+  "name": "bookmyshow",
+  "version": "1.0.0",
+  "description": "Bookmyshow is a ticketing platform where you can book tickets for a movie show.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khadatkarrohit/bookMyShow.git"
+  },
+  "author": "Rohit Khadatkar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khadatkarrohit/bookMyShow/issues"
+  },
+  "homepage": "https://github.com/khadatkarrohit/bookMyShow#readme"
+}
