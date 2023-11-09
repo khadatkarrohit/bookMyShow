@@ -174,7 +174,7 @@ CREATE TABLE `movie_master` (
   `country` varchar(45) NOT NULL,
   `genre` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -183,6 +183,7 @@ CREATE TABLE `movie_master` (
 
 LOCK TABLES `movie_master` WRITE;
 /*!40000 ALTER TABLE `movie_master` DISABLE KEYS */;
+INSERT INTO `movie_master` VALUES (1,'Animal','test',150,'Hindi','2023-03-25 00:00:00','India','action'),(2,'Godzilla','test',160,'English','2023-04-12 00:00:00','America','adventure'),(3,'Archies','test',145,'Hindi','2023-12-12 00:00:00','India','comedy'),(4,'Bahubali','test',180,'English','2023-01-12 00:00:00','India','action');
 /*!40000 ALTER TABLE `movie_master` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -233,7 +234,7 @@ CREATE TABLE `show_master` (
   KEY `movie_master_fk_idx` (`movie_master_id`),
   CONSTRAINT `cinema_hall_master_fk` FOREIGN KEY (`cinema_hall_master_id`) REFERENCES `cinema_hall_master` (`id`),
   CONSTRAINT `movie_master_fk` FOREIGN KEY (`movie_master_id`) REFERENCES `movie_master` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -242,6 +243,7 @@ CREATE TABLE `show_master` (
 
 LOCK TABLES `show_master` WRITE;
 /*!40000 ALTER TABLE `show_master` DISABLE KEYS */;
+INSERT INTO `show_master` VALUES (1,'2023-09-11 00:00:00','2023-09-11 12:00:00','2023-09-11 14:30:00',1,1),(2,'2023-09-11 00:00:00','2023-09-11 10:00:00','2023-09-11 12:30:00',8,1),(3,'2023-09-11 00:00:00','2023-09-11 14:00:00','2023-09-11 16:30:00',15,1),(4,'2023-09-11 00:00:00','2023-09-11 12:00:00','2023-09-11 14:40:00',1,2),(5,'2023-09-12 00:00:00','2023-09-11 10:00:00','2023-09-11 12:40:00',8,2),(6,'2023-09-12 00:00:00','2023-09-11 14:00:00','2023-09-11 16:40:00',15,2);
 /*!40000 ALTER TABLE `show_master` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -306,6 +308,14 @@ LOCK TABLES `user_master` WRITE;
 /*!40000 ALTER TABLE `user_master` DISABLE KEYS */;
 /*!40000 ALTER TABLE `user_master` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Dumping events for database 'book_my_show'
+--
+
+--
+-- Dumping routines for database 'book_my_show'
+--
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -316,4 +326,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-09 11:17:38
+-- Dump completed on 2023-11-09 12:06:57
