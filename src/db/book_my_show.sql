@@ -63,7 +63,7 @@ CREATE TABLE `cinema_hall_master` (
   PRIMARY KEY (`id`),
   KEY `cinema_master_fk_idx` (`cinema_master_id`),
   CONSTRAINT `cinema_master_fk` FOREIGN KEY (`cinema_master_id`) REFERENCES `cinema_master` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -72,6 +72,7 @@ CREATE TABLE `cinema_hall_master` (
 
 LOCK TABLES `cinema_hall_master` WRITE;
 /*!40000 ALTER TABLE `cinema_hall_master` DISABLE KEYS */;
+INSERT INTO `cinema_hall_master` VALUES (1,'Screen A','180',1),(2,'Screen B','120',1),(3,'Screen C','150',1),(4,'Screen 1','100',2),(5,'Screen 2','120',2),(6,'Screen 3','160',2),(7,'Screen A','200',3),(8,'Screen Gold','150',4),(9,'Screen Silver','100',4),(10,'Screen A','80',5),(11,'Screen B','250',5),(12,'Screen C','140',5),(13,'Screen A','180',6),(14,'Screen B','120',6),(15,'Screen C','150',7),(16,'Screen A','180',7),(17,'Screen B','120',7);
 /*!40000 ALTER TABLE `cinema_hall_master` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -90,7 +91,7 @@ CREATE TABLE `cinema_master` (
   PRIMARY KEY (`id`),
   KEY `city_master_fk_idx` (`city_master_id`),
   CONSTRAINT `city_master_fk` FOREIGN KEY (`city_master_id`) REFERENCES `city_master` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -99,6 +100,7 @@ CREATE TABLE `cinema_master` (
 
 LOCK TABLES `cinema_master` WRITE;
 /*!40000 ALTER TABLE `cinema_master` DISABLE KEYS */;
+INSERT INTO `cinema_master` VALUES (1,'PVR 1',3,1),(2,'Inox 1',3,1),(3,'Sudama Talkies',1,1),(4,'PVR Cinemas',2,2),(5,'Carnival Cinemas',3,2),(6,'PVR Icon Cinemas',2,3),(7,'Cinepolis Cinema',3,3);
 /*!40000 ALTER TABLE `cinema_master` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -142,7 +144,7 @@ CREATE TABLE `city_master` (
   `state` varchar(45) NOT NULL,
   `zip_code` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -151,6 +153,7 @@ CREATE TABLE `city_master` (
 
 LOCK TABLES `city_master` WRITE;
 /*!40000 ALTER TABLE `city_master` DISABLE KEYS */;
+INSERT INTO `city_master` VALUES (1,'Nagpur','Maharashtra','440022'),(2,'Hyderabad','Telangana','500034'),(3,'Mumbai','Maharashtra','400068');
 /*!40000 ALTER TABLE `city_master` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -313,4 +316,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-09  1:49:41
+-- Dump completed on 2023-11-09 11:17:38
